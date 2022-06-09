@@ -22,6 +22,10 @@
   --header-bg: #ffffff;
   --border-line-color: #eeeeee;
   --our-team-section-bg: #f5f4fa;
+
+  --grid-set-gap: 30px;
+  --container-width: 1200px;
+  --body-width: 1600px;
 }
 
 /* body */
@@ -31,48 +35,86 @@ body {
   color: var(--p-color);
   font-size: 14px;
   letter-spacing: 0.03em;
+  width: var(--body-width);
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul[class],
+li {
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 /* common styles for header and footer*/
+
+.container {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  width: var(--container-width);
+  padding-left: 15px;
+  padding-right: 15px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Header */
 .header {
+  display: flex;
+  align-items: center;
+  width: 100%;
   background-color: var(--header-bg);
-  border-width: 2px;
-  border-color: var(--header-border-color);
+  border: 1px solid var(--header-border-color);
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
-.nav {
-  display: inline-block;
-  width: 532px;
-}
 /* Logo */
 .header-logo {
+  display: block;
   font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.19;
   color: var(--logo-header-color);
   text-decoration: none;
-  margin-left: ;
-  margin-top: 24;
 }
 
 .header-logo:hover,
 .header-logo:focus {
   color: var(--accent-color);
 }
-/* End of logo */
 
 /* Menu */
 
 .header-menu {
+  display: flex;
   margin-left: 93px;
-  margin-top: 32px;
-  padding: 0;
 }
 
-.header-menu-item {
+.header-item {
+  display: block;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-menu-item-decor {
   text-decoration: none;
   font-weight: 500;
   color: var(--header-menu-color);
@@ -80,13 +122,18 @@ body {
   letter-spacing: 0.02em;
 }
 
-.header-menu-item:hover,
-.header-menu-item:focus {
+.header-menu-item-decor:hover,
+.header-menu-item-decor:focus {
   color: var(--accent-color);
 }
 /* Links */
 
-.header-link-item {
+.header-links {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-link-item-decor {
   text-decoration: none;
   font-weight: 500;
   color: var(--header-link-color);
@@ -94,23 +141,31 @@ body {
   letter-spacing: 0.02em;
 }
 
-.header-link-item:hover,
-.header-link-item:focus {
+.header-link-item-decor:hover,
+.header-link-item-decor:focus {
   color: var(--accent-color);
 }
 
 /* Footer */
 .footer {
+  display: block;
+  /* flex-direction: inherit; */
+  /* align-items: inherit; */
+  /* justify-content: inherit; */
   background-color: var(--footer-bg);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-logo {
+  display: block;
   font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.19;
   color: var(--logo-footer-color);
   text-decoration: none;
+  margin-bottom: 20px;
 }
 
 .footer-logo:hover,
@@ -118,16 +173,27 @@ body {
   color: var(--accent-color);
 }
 
-.footer-address {
+.footer-address-lists {
+  display: block;
   font-style: normal;
+  margin: 0;
 }
 
-.footer-postadress {
+.footer-postaddress {
   line-height: 1.71;
   color: var(--footer-address-color);
+  margin-bottom: 9px;
 }
 
-.footer-contacts {
+.footer-mailto {
+  display: block;
+  text-decoration: none;
+  color: var(--footer-contacts-color);
+  line-height: 1.71;
+  margin-bottom: 9px;
+}
+
+.footer-tel {
   text-decoration: none;
   color: var(--footer-contacts-color);
   line-height: 1.71;
@@ -193,6 +259,7 @@ body {
 
 .peculiarities-title {
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--h3-color);
@@ -227,10 +294,6 @@ body {
   font-size: 36px;
   line-height: 1.17;
   color: var(--h2-color);
-}
-
-.team-list {
-  list-style: none;
 }
 
 .team-name {
@@ -296,14 +359,4 @@ body {
 /* Color accent */
 .accent {
   color: var(--accent-color);
-}
-/* List style: none */
-.list-style-none {
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-}
-
-.item-inline-block {
-  display: inline-block;
 }
