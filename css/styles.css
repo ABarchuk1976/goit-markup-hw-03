@@ -28,6 +28,10 @@
   --container-width: 1200px;
   --default-pdleft: 15px;
   --default-pdright: 15px;
+  --defalt-pdtop: 94px;
+  --defalt-pdbottom: 94px;
+  --hero-pdtop: 200px;
+  --hero-pdbottom: 200px;
   --body-width: 1600px;
 }
 
@@ -75,6 +79,12 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.section {
+  padding-top: var(--defalt-pdtop);
+  padding-bottom: var(--defalt-pdbottom);
+  margin: 0 auto;
 }
 
 .container {
@@ -225,8 +235,8 @@ img {
   background-color: var(--hero-bg);
   color: var(--hero-title-color);
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: var(--hero-pdtop);
+  padding-bottom: var(--hero-pdbottom);
 }
 
 .hero-title {
@@ -264,12 +274,6 @@ img {
 
 /* Peculiarities */
 
-.perculiarities {
-  padding-top: 94px;
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .perculiarities-list {
   display: flex;
   margin-left: calc(-1 * var(--grid-set-gap));
@@ -298,8 +302,7 @@ img {
 }
 /* destinations */
 .destinations {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 0;
   text-align: center;
 }
 
@@ -327,8 +330,6 @@ img {
 /* Our team */
 .team {
   background-color: var(--our-team-section-bg);
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .team-cards {
