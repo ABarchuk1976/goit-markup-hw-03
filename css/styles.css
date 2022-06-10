@@ -22,9 +22,12 @@
   --header-bg: #ffffff;
   --border-line-color: #eeeeee;
   --our-team-section-bg: #f5f4fa;
+  --card-bg: #ffffff;
 
   --grid-set-gap: 30px;
   --container-width: 1200px;
+  --default-pdleft: 15px;
+  --default-pdright: 15px;
   --body-width: 1600px;
 }
 
@@ -45,11 +48,13 @@ p {
   margin: 0;
 }
 
-ul[class],
+ul,
 li {
-  padding: 0;
+  margin: 0;
   list-style: none;
   text-decoration: none;
+  padding-inline-start: 0;
+  padding: 0;
 }
 
 img {
@@ -59,14 +64,23 @@ img {
 }
 /* common styles for header and footer*/
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
-  display: inherit;
-  flex-direction: inherit;
-  align-items: inherit;
-  justify-content: inherit;
   width: var(--container-width);
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: var(--default-pdleft);
+  padding-right: var(--default-pdright);
 
   margin-left: auto;
   margin-right: auto;
@@ -74,13 +88,16 @@ img {
 
 /* Header */
 .header {
-  display: flex;
-  align-items: center;
   width: 100%;
   background-color: var(--header-bg);
   border: 1px solid var(--header-border-color);
   padding-top: 24px;
   padding-bottom: 25px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
 }
 
 /* Logo */
@@ -148,10 +165,6 @@ img {
 
 /* Footer */
 .footer {
-  display: block;
-  /* flex-direction: inherit; */
-  /* align-items: inherit; */
-  /* justify-content: inherit; */
   background-color: var(--footer-bg);
   padding-top: 60px;
   padding-bottom: 60px;
@@ -199,8 +212,10 @@ img {
   line-height: 1.71;
 }
 
-.footer-contacts:hover,
-.footer-contacts:focus {
+.footer-mailto:hover,
+.footer-mailto:focus,
+.footer-tel:hover,
+.footer-tel:focus {
   color: var(--accent-color);
 }
 /* styles for index.html/main */
@@ -250,31 +265,41 @@ img {
 /* Peculiarities */
 
 .perculiarities {
-  width: 1140px;
-  margin: auto;
+  padding-top: 94px;
+  width: 1200px;
+  margin: 0 auto;
 }
 
-.peculiarities-title-hide,
-.portfolio-title {
-  display: none;
+.perculiarities-list {
+  display: flex;
+  margin-left: calc(-1 * var(--grid-set-gap));
+  margin-top: calc(-1 * var(--grid-set-gap));
+  margin-right: 0px;
+}
+
+.perculiarities-item {
+  width: calc(100% / 4 - calc(3 * var(--grid-set-gap) / 4));
+  margin-left: var(--grid-set-gap);
+  margin-top: var(--grid-set-gap);
 }
 
 .peculiarities-title {
+  display: block;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--h3-color);
+  margin-bottom: 10px;
 }
 
 .peculiarities-p {
-  width: 270px;
   line-height: 1.71;
 }
 /* destinations */
 .destinations {
-  width: 1240px;
-  margin: auto;
+  padding-top: 94px;
+  text-align: center;
 }
 
 .destinations-title {
@@ -282,20 +307,57 @@ img {
   font-size: 36px;
   line-height: 1.17;
   color: var(--h2-color);
+  margin-bottom: 50px;
 }
 
+.destinations-list {
+  display: flex;
+  margin-left: calc(-1 * var(--grid-set-gap));
+  margin-top: calc(-1 * var(--grid-set-gap));
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.destinations-item {
+  flex-basis: calc(100% / 3 - calc(2 * var(--grid-set-gap) / 3));
+  margin-left: var(--grid-set-gap);
+  margin-top: var(--grid-set-gap);
+}
 /* Our team */
 .team {
   background-color: var(--our-team-section-bg);
-  padding: auto;
   padding-top: 94px;
   padding-bottom: 94px;
+  margin-top: 94px;
 }
+
+.team-cards {
+  display: flex;
+  margin-left: calc(-1 * var(--grid-set-gap));
+  margin-top: calc(-1 * var(--grid-set-gap));
+  margin-right: 0px;
+  text-align: center;
+}
+
+.team-card {
+  width: calc(100% / 4 - calc(3 * var(--grid-set-gap) / 4));
+  margin-left: var(--grid-set-gap);
+  margin-top: var(--grid-set-gap);
+}
+
+.card {
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 .team-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   color: var(--h2-color);
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .team-name {
@@ -303,12 +365,17 @@ img {
   font-size: 16px;
   line-height: 1.19;
   color: var(--h3-color);
+  padding-top: 30px;
+  background-color: var(--card-bg);
 }
 
 .team-position {
   font-size: 16px;
   line-height: 1.19;
   color: var(--p-color);
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: var(--card-bg);
 }
 /* styles for portfolio.html/main */
 
