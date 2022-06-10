@@ -65,6 +65,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  margin: 0;
 }
 /* common styles for header and footer*/
 
@@ -341,12 +342,12 @@ img {
 }
 
 .team-card {
-  width: calc(100% / 4 - calc(3 * var(--grid-set-gap) / 4));
+  flex-basis: calc(100% / 4 - calc(3 * var(--grid-set-gap) / 4));
   margin-left: var(--grid-set-gap);
   margin-top: var(--grid-set-gap);
 }
 
-.card {
+.team-shadow {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -420,7 +421,7 @@ img {
   width: 130px;
 }
 
-.filter-button:not(:last-child) {
+.filter-button:last-child {
   margin-right: 8px;
 }
 
@@ -435,12 +436,33 @@ img {
   color: var(--button-accent-color);
 }
 
-.example-link {
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--grid-set-gap));
+  margin-top: calc(-1 * var(--grid-set-gap));
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.portfolio-card {
+  flex-basis: calc(100% / 3 - calc(2 * var(--grid-set-gap) / 3))-1;
+  margin-left: var(--grid-set-gap);
+  margin-top: var(--grid-set-gap);
+}
+
+.card-portfolio {
+  border: 1px solid var(--border-line-color);
+  border-top: none;
+  padding: 20px 24px;
+}
+
+.portfolio-link {
   text-decoration: none;
   color: inherit;
 }
 
-.example-title {
+.portfolio-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -448,10 +470,12 @@ img {
   color: var(--h2-color);
 }
 
-.example-text {
+.portfolio-text {
+  display: block;
   font-size: 16px;
   line-height: 1.88;
 }
+
 /* Color accent */
 .accent {
   color: var(--accent-color);
