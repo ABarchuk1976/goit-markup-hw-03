@@ -91,8 +91,8 @@ img {
   width: 100%;
   background-color: var(--header-bg);
   border: 1px solid var(--header-border-color);
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 23px;
+  padding-bottom: 24px;
 }
 
 .header .container {
@@ -225,6 +225,8 @@ img {
   background-color: var(--hero-bg);
   color: var(--hero-title-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -233,7 +235,6 @@ img {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding-top: 200px;
   margin-bottom: 30px;
 }
 
@@ -252,7 +253,6 @@ img {
   cursor: pointer;
   width: 200px;
   height: 50px;
-  margin-bottom: 200px;
 }
 
 .hero-button:hover,
@@ -299,6 +299,7 @@ img {
 /* destinations */
 .destinations {
   padding-top: 94px;
+  padding-bottom: 94px;
   text-align: center;
 }
 
@@ -328,7 +329,6 @@ img {
   background-color: var(--our-team-section-bg);
   padding-top: 94px;
   padding-bottom: 94px;
-  margin-top: 94px;
 }
 
 .team-cards {
