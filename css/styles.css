@@ -380,6 +380,12 @@ img {
 }
 /* styles for portfolio.html/main */
 
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
 .filter-button {
   background-color: var(--button-bg);
   color: var(--button-color);
@@ -388,14 +394,34 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
-  margin-top: 30px;
-  margin: auto;
   border: none;
+  height: 38px;
   cursor: pointer;
+}
+
+.all-filters {
+  width: 73px;
+}
+
+.only-websites {
+  width: 128px;
+}
+
+.only-applications {
+  width: 145px;
+}
+
+.only-design {
+  width: 103px;
+}
+
+.only-marketing {
+  width: 130px;
+}
+
+.filter-button:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filter-button:hover,
