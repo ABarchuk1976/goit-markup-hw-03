@@ -90,8 +90,8 @@ img {
 .header {
   width: 100%;
   background-color: var(--header-bg);
-  border: 1px solid var(--header-border-color);
-  padding-top: 23px;
+  border-bottom: 1px solid var(--header-border-color);
+  padding-top: 24px;
   padding-bottom: 24px;
 }
 
