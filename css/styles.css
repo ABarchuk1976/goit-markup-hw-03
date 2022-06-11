@@ -461,16 +461,17 @@ img {
   margin-top: var(--grid-column-gap);
 }
  */
-.portfolio-card {
-  border: 1px solid var(--border-line-color);
-  border-top: none;
-  padding: 20px 24px;
-}
 
 .portfolio-link {
   display: block;
   text-decoration: none;
   color: inherit;
+}
+
+.portfolio-card {
+  border: 1px solid var(--border-line-color);
+  border-top: none;
+  padding: 20px 24px;
 }
 
 .portfolio-title {
