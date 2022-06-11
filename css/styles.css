@@ -48,16 +48,16 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+ul,
+li {
   margin: 0;
 }
 
 ul,
 li {
-  margin: 0;
   list-style: none;
   text-decoration: none;
-  padding-inline-start: 0;
   padding: 0;
 }
 
@@ -65,7 +65,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 0;
 }
 /* common styles for header and footer*/
 
@@ -324,7 +323,7 @@ img {
 }
 
 .destinations-item {
-  flex-basis: calc(100% / 3 - calc(2 * var(--grid-set-gap) / 3));
+  flex-basis: calc(calc(100% + var(--grid-set-gap)) / 3 - var(--grid-set-gap));
   margin-left: var(--grid-set-gap);
   margin-top: var(--grid-set-gap);
 }
@@ -342,7 +341,7 @@ img {
 }
 
 .team-card {
-  flex-basis: calc(100% / 4 - calc(3 * var(--grid-set-gap) / 4));
+  flex-basis: calc(calc(100% + var(--grid-set-gap)) / 4 - var(--grid-set-gap));
   margin-left: var(--grid-set-gap);
   margin-top: var(--grid-set-gap);
 }
@@ -436,28 +435,29 @@ img {
   color: var(--button-accent-color);
 }
 
-.portfolio-cards {
+.portfolio-card-set {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--grid-set-gap));
   margin-top: calc(-1 * var(--grid-set-gap));
-  margin-right: 0px;
-  margin-bottom: 0px;
 }
 
-.portfolio-card {
-  flex-basis: calc(100% / 3 - calc(2 * var(--grid-set-gap) / 3))-1;
+.portfolio-card-item {
+  display: block;
+  flex-basis: calc(calc(100% + var(--grid-set-gap)) / 3 - var(--grid-set-gap));
   margin-left: var(--grid-set-gap);
   margin-top: var(--grid-set-gap);
 }
 
-.card-portfolio {
+.portfolio-card {
   border: 1px solid var(--border-line-color);
   border-top: none;
   padding: 20px 24px;
 }
 
 .portfolio-link {
+  display: block;
   text-decoration: none;
   color: inherit;
 }
