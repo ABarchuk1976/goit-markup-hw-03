@@ -440,14 +440,13 @@ img {
 .portfolio-card-set {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  justify-content: center;
   margin-left: calc(-1 * var(--grid-row-gap));
   margin-top: calc(-1 * var(--grid-column-gap));
 }
 
 .portfolio-card-item {
-  display: block;
-  flex-basis: calc(calc(100% + var(--grid-row-gap)) / 3 - var(--grid-row-gap));
+  flex-basis: calc(100% / 3 - var(--grid-row-gap));
   margin-left: var(--grid-row-gap);
   margin-top: var(--grid-column-gap);
 }
