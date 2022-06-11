@@ -440,6 +440,7 @@ img {
 .portfolio-card-set {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   margin-left: calc(-1 * var(--grid-row-gap));
   margin-top: calc(-1 * var(--grid-column-gap));
 }
