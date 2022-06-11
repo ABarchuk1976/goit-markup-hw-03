@@ -26,6 +26,7 @@
 
   --grid-row-gap: 30px;
   --grid-column-gap: 30px;
+  --grid-column-number: 3;
   --container-width: 1200px;
   --default-pdleft: 15px;
   --default-pdright: 15px;
@@ -439,14 +440,19 @@ img {
 .portfolio-card-set {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--grid-row-gap));
-  margin-top: calc(-1 * var(--grid-column-gap));
 }
 
 .portfolio-card-item {
   display: block;
   flex-basis: calc(calc(100% + var(--grid-row-gap)) / 3 - var(--grid-row-gap));
+}
+
+/* Not for column number x n + 1 */
+.portfolio-card-item:not(:nth-child(3n + 1)) {
   margin-left: var(--grid-row-gap);
+}
+/* For all after column number */
+.portfolio-card-item:nth-child(n + 4) {
   margin-top: var(--grid-column-gap);
 }
 
