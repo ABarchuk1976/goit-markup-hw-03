@@ -1,4 +1,4 @@
-# goit-markup-hw-02
+# goit-markup-hw-03
 
 Work home 02
 
@@ -11,3 +11,9 @@ After first check:
 5. Fixed F5: body color ffffff
 
 Sended to mentor again
+
+Work home 03
+
+6. All <ul> were compose by Repeta methode. In the last list you can see anouther methode by
+   parent-child, in notes.
+7. All requirements fixed.
