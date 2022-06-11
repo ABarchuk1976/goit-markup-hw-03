@@ -24,7 +24,8 @@
   --our-team-section-bg: #f5f4fa;
   --card-bg: #ffffff;
 
-  --grid-set-gap: 30px;
+  --grid-row-gap: 30px;
+  --grid-column-gap: 30px;
   --container-width: 1200px;
   --default-pdleft: 15px;
   --default-pdright: 15px;
@@ -276,15 +277,15 @@ img {
 
 .perculiarities-list {
   display: flex;
-  margin-left: calc(-1 * var(--grid-set-gap));
-  margin-top: calc(-1 * var(--grid-set-gap));
+  margin-left: calc(-1 * var(--grid-row-gap));
+  margin-top: calc(-1 * var(--grid-column-gap));
   margin-right: 0px;
 }
 
 .perculiarities-item {
-  width: calc(100% / 4 - calc(3 * var(--grid-set-gap) / 4));
-  margin-left: var(--grid-set-gap);
-  margin-top: var(--grid-set-gap);
+  width: calc(100% / 4 - calc(3 * var(--grid-row-gap) / 4));
+  margin-left: var(--grid-row-gap);
+  margin-top: var(--grid-column-gap);
 }
 
 .peculiarities-title {
@@ -316,16 +317,16 @@ img {
 
 .destinations-list {
   display: flex;
-  margin-left: calc(-1 * var(--grid-set-gap));
-  margin-top: calc(-1 * var(--grid-set-gap));
+  margin-left: calc(-1 * var(--grid-row-gap));
+  margin-top: calc(-1 * var(--grid-column-gap));
   margin-right: 0px;
   margin-bottom: 0px;
 }
 
 .destinations-item {
-  flex-basis: calc(calc(100% + var(--grid-set-gap)) / 3 - var(--grid-set-gap));
-  margin-left: var(--grid-set-gap);
-  margin-top: var(--grid-set-gap);
+  flex-basis: calc(calc(100% + var(--grid-row-gap)) / 3 - var(--grid-row-gap));
+  margin-left: var(--grid-row-gap);
+  margin-top: var(--grid-column-gap);
 }
 /* Our team */
 .team {
@@ -334,16 +335,16 @@ img {
 
 .team-cards {
   display: flex;
-  margin-left: calc(-1 * var(--grid-set-gap));
-  margin-top: calc(-1 * var(--grid-set-gap));
+  margin-left: calc(-1 * var(--grid-row-gap));
+  margin-top: calc(-1 * var(--grid-column-gap));
   margin-right: 0px;
   text-align: center;
 }
 
 .team-card {
-  flex-basis: calc(calc(100% + var(--grid-set-gap)) / 4 - var(--grid-set-gap));
-  margin-left: var(--grid-set-gap);
-  margin-top: var(--grid-set-gap);
+  flex-basis: calc(calc(100% + var(--grid-row-gap)) / 4 - var(--grid-row-gap));
+  margin-left: var(--grid-row-gap);
+  margin-top: var(--grid-column-gap);
 }
 
 .team-shadow {
@@ -437,17 +438,16 @@ img {
 
 .portfolio-card-set {
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--grid-set-gap));
-  margin-top: calc(-1 * var(--grid-set-gap));
+  margin-left: calc(-1 * var(--grid-row-gap));
+  margin-top: calc(-1 * var(--grid-column-gap));
 }
 
 .portfolio-card-item {
   display: block;
-  flex-basis: calc(calc(100% + var(--grid-set-gap)) / 3 - var(--grid-set-gap));
-  margin-left: var(--grid-set-gap);
-  margin-top: var(--grid-set-gap);
+  flex-basis: calc(calc(100% + var(--grid-row-gap)) / 3 - var(--grid-row-gap));
+  margin-left: var(--grid-row-gap);
+  margin-top: var(--grid-column-gap);
 }
 
 .portfolio-card {
