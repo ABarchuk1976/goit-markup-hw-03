@@ -44,7 +44,6 @@ body {
   color: var(--p-color);
   font-size: 14px;
   letter-spacing: 0.03em;
-  width: var(--body-width);
 }
 
 h1,
@@ -445,7 +444,7 @@ img {
 }
 
 .portfolio-card-item {
-  flex-basis: calc(100% / 3 - var(--grid-row-gap));
+  flex-basis: calc(calc(100% + var(--grid-row-gap)) / 3 - var(--grid-row-gap));
   margin-left: var(--grid-row-gap);
   margin-top: var(--grid-column-gap);
 }
