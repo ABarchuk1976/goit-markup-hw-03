@@ -283,7 +283,7 @@ img {
 }
 
 .perculiarities-item {
-  width: calc(100% / 4 - calc(3 * var(--grid-row-gap) / 4));
+  flex-basis: calc(100% / 4 - var(--grid-row-gap));
   margin-left: var(--grid-row-gap);
   margin-top: var(--grid-column-gap);
 }
@@ -319,12 +319,10 @@ img {
   display: flex;
   margin-left: calc(-1 * var(--grid-row-gap));
   margin-top: calc(-1 * var(--grid-column-gap));
-  margin-right: 0px;
-  margin-bottom: 0px;
 }
 
 .destinations-item {
-  flex-basis: calc(calc(100% + var(--grid-row-gap)) / 3 - var(--grid-row-gap));
+  flex-basis: calc(100% / 3 - var(--grid-row-gap));
   margin-left: var(--grid-row-gap);
   margin-top: var(--grid-column-gap);
 }
@@ -342,7 +340,7 @@ img {
 }
 
 .team-card {
-  flex-basis: calc(calc(100% + var(--grid-row-gap)) / 4 - var(--grid-row-gap));
+  flex-basis: calc(100% / 4 - var(--grid-row-gap));
   margin-left: var(--grid-row-gap);
   margin-top: var(--grid-column-gap);
 }
@@ -444,7 +442,7 @@ img {
 }
 
 .portfolio-card-item {
-  flex-basis: calc(calc(100% + var(--grid-row-gap)) / 3 - var(--grid-row-gap));
+  flex-basis: calc(100% / 3 - var(--grid-row-gap));
   margin-left: var(--grid-row-gap);
   margin-top: var(--grid-column-gap);
 }
