@@ -350,6 +350,7 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--card-bg);
+  padding-bottom: 30px;
 }
 
 .team-title {
@@ -374,7 +375,6 @@ img {
   font-size: 16px;
   line-height: 1.19;
   color: var(--p-color);
-  padding-bottom: 30px;
   background-color: var(--card-bg);
 }
 /* styles for portfolio.html/main */
@@ -475,6 +475,7 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--h2-color);
+  margin-bottom: 4px;
 }
 
 .portfolio-text {
